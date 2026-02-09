@@ -7,5 +7,9 @@ app.get('/', (req, res) => {
     res.render('index', { title: 'Home Page' });
 });
 
+app.get('/new', (req, res) => {
+    res.render('new', { title: 'News Page' });
+});
+
 
 module.exports = app;
