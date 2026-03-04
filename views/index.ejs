@@ -20,5 +20,15 @@
 <body>
     <h1><%= title %></h1>
     <p>Welcome to your Express app with EJS!</p>
+    
+    <div class="messages">
+        <% messages.forEach(message => { %>
+            <div class="message">
+                <strong><%= message.user %></strong>
+                <p><%= message.text %></p>
+                <small><%= message.added %></small>
+            </div>
+        <% }); %>
+    </div>
 </body>
 </html>
