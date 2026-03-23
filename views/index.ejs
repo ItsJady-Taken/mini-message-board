@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/index.css">
     <title><%= title %></title>
     <style>
         body {
@@ -15,11 +16,12 @@
         h1 {
             color: #333;
         }
+       
     </style>
 </head>
 <body>
     <div>
-        <a href="/new">Create New Message</a>
+        <a class="new-message-link" href="/new">Create New Message</a>
     </div>
     <h1><%= title %></h1>
     <p>Welcome to your Express app with EJS!</p>
@@ -29,8 +31,8 @@
             <div class="message" id="message-<%= messages.indexOf(message) %>">
                 <strong><%= message.user %></strong>
                 <p><%= message.text %></p>
-                <small><%= message.date %></small>
-                <a href="/message/<%= messages.indexOf(message) %>">View Details</a>
+                <small><%= message.date %></small> <br>
+                <a class="view-link" href="/message/<%= messages.indexOf(message) %>">View Details</a>
             </div>
         <% }); %>
     </div>

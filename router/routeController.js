@@ -1,9 +1,12 @@
 const express = require('express');
 const app = express();
 const messages = require('../data/message');
+const path = require('path');
 
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '../views'));
 app.use(express.urlencoded({ extended: true }));
+
 
 app.get('/', (req, res) => {
     res.render('index', { title: 'Home Page', messages: messages });
