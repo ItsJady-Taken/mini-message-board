@@ -23,10 +23,16 @@
 </head>
 
 <body>
-    <h1>
-        <%= title %>
-    </h1>
-    <p>Welcome to your Express app with EJS!</p>
+   <h2>New Message</h2>
+   <form action="/new" method="POST">
+       <label for="name">Name:</label>
+       <input type="text" id="name" name="authorName" required>
+       <br><br>
+       <label for="message">Message:</label>
+       <textarea id="message" name="message" required></textarea>
+       <br><br>
+       <input type="submit" value="Submit">
+   </form>
 </body>
 
 </html>
