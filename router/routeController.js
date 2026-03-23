@@ -15,8 +15,18 @@ app.get('/new', (req, res) => {
 
 app.post('/new', (req, res) => {
     const { authorName, message } = req.body;
-    messages.push({ text: message, user: authorName, added: new Date() });
+    messages.push({ text: message, user: authorName, date: new Date() });
     res.redirect('/');
+});
+
+app.get('/message/:id', (req, res) => {
+    const messageId = parseInt(req.params.id);
+    const message = messages[messageId];
+    if (message) {
+        res.render('message', { title: 'Message Details', message: message });
+    } else {
+        res.status(404).send('Message not found');
+    }
 });
 
 

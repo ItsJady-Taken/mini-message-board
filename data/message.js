@@ -2,12 +2,12 @@ const messages = [
     {
         text: "Hi David!",
         user: "Amando",
-        added: new Date()
+        date: new Date()
     },
     {
         text: "Hello World!",
         user: "Charles",
-        added: new Date()
+        date: new Date()
     }
 ];
 

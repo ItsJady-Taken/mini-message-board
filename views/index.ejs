@@ -18,15 +18,19 @@
     </style>
 </head>
 <body>
+    <div>
+        <a href="/new">Create New Message</a>
+    </div>
     <h1><%= title %></h1>
     <p>Welcome to your Express app with EJS!</p>
     
     <div class="messages">
         <% messages.forEach(message => { %>
-            <div class="message">
+            <div class="message" id="message-<%= messages.indexOf(message) %>">
                 <strong><%= message.user %></strong>
                 <p><%= message.text %></p>
-                <small><%= message.added %></small>
+                <small><%= message.date %></small>
+                <a href="/message/<%= messages.indexOf(message) %>">View Details</a>
             </div>
         <% }); %>
     </div>
