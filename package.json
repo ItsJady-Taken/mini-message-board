@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
+    "build": "echo 'Build complete'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/ItsJady-Taken/mini-message-board#readme",
   "dependencies": {
     "ejs": "^4.0.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "serverless-http": "^3.2.0"
   }
 }
